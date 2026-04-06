@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import App from './App'; // Або інший твій головний компонент
 import { describe, expect, it } from 'vitest';
 
