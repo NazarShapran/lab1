@@ -32,7 +32,9 @@ function App() {
   }
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     generatePassword()
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const copyToClipboard = async () => {
@@ -40,7 +42,7 @@ function App() {
       await navigator.clipboard.writeText(password)
       alert('Password copied to clipboard!')
     } catch (error) {
-      alert('Copy failed. Select the password and copy manually.')
+      console.error("Copy failed. Select the password and copy manually.", error);
     }
   }
 
